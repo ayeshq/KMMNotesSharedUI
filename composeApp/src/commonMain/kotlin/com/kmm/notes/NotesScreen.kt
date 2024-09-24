@@ -38,8 +38,7 @@ fun NotesScreen(modifier: Modifier) {
             content = { innerPadding ->
                 // Placeholder for the screen content
                 Box(
-                    modifier = Modifier
-                        .fillMaxSize()
+                    modifier = modifier
                         .padding(innerPadding),
                     contentAlignment = Alignment.Center
                 ) {
