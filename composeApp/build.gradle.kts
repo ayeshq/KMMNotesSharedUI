@@ -65,6 +65,8 @@ kotlin {
             implementation(libs.runtime)
             implementation(libs.kotlinx.datetime)
             implementation(libs.koin.core)
+
+            implementation(libs.jetbrains.lifecycle.viewmodel.compose)
         }
     }
 }
