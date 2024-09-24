@@ -104,3 +104,11 @@ android {
     }
 }
 
+sqldelight {
+    databases {
+        create("AppDatabase") {
+            packageName.set("com.kmm.notes.cache")
+        }
+    }
+}
+
