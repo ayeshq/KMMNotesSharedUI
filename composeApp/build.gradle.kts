@@ -23,7 +23,9 @@ kotlin {
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
+//        iosX86() !!
+        //TODO add Simulator-x86_64 to build on iOS simulator on my machine, it looks it's not supported (yet) !
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
