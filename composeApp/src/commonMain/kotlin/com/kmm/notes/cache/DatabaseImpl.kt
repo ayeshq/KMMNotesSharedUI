@@ -6,9 +6,13 @@ class DatabaseImpl(
     databaseDriverFactory: DatabaseDriverFactory
 ) : Database {
 
-    private val database = AppDatabase(databaseDriverFactory.createDriver())
+//    private val appDatabase = AppDatabase(databaseDriverFactory.createDriver())
 
-    private val dbQuery = database.appDatabaseQueries
+    private val appDatabase by lazy {
+        AppDatabase(databaseDriverFactory.createDriver())
+    }
+
+    private val dbQuery = appDatabase.appDatabaseQueries
 
     override fun getAllNotes(): List<Note> {
         return dbQuery.selectAllNotes { id, title, body ->

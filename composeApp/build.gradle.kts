@@ -42,6 +42,12 @@ kotlin {
             implementation(libs.ktor.client.android)
             implementation(libs.android.driver)
             implementation(libs.koin.android)
+
+//            implementation("io.insert-koin:koin-androidx-viewmodel:3.5.0")
+//            implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+            implementation(libs.androidx.compose.material3)
+            implementation(libs.koin.androidx.compose)
         }
 
         iosMain.dependencies {
@@ -68,6 +74,9 @@ kotlin {
             implementation(libs.koin.core)
 
             implementation(libs.jetbrains.lifecycle.viewmodel.compose)
+
+            implementation(libs.koin.compose.viewmodel)
+            implementation(libs.koin.compose)
         }
     }
 }

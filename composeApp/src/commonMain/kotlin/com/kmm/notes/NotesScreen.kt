@@ -1,7 +1,6 @@
 package com.kmm.notes
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
@@ -16,13 +15,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 @Preview
-fun NotesScreen(modifier: Modifier) {
+fun NotesScreen(
+    modifier: Modifier,
+    viewModel: NotesViewModel
+) {
     val onAddNoteClick: () -> Unit = {
 
     }
+
+
     MaterialTheme {
         Scaffold(
             topBar = {
